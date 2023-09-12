@@ -437,11 +437,16 @@ display: block;
     border-radius: 50px;
     background-color: #ffa500;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 150px;
     left: 140px;
     
 
 }
+
+
 .get-text {
     width: 50%;
    
@@ -590,7 +595,7 @@ font-size: 18px;
 }
 
 .repair{
-    background: url(./images/repair\ image)no-repeat;
+    background: url(../images/repair-image)no-repeat;
     background-size: cover;
     width: 100%;
     z-index: 1;
@@ -876,7 +881,7 @@ color: #ffa500;
     z-index: -1;
 }
 .makinge-image{
- background: url(./images/making\ image)no-repeat;
+ background: url(../images/making-image)no-repeat;
  background-size: cover;
  width: 100%;
  position: relative;
@@ -1650,6 +1655,38 @@ padding-left: 30px;
 
 }
 
+.serv-text li a:hover {
+    color: #ffa500;
+}
+
+.reserved-back{
+    background-color: #181818;
+    padding: 40px 0px;
+    
+
+}
+
+
+.serv-text ul{
+    display: flex;
+    
+}
+
+.reserved-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.serv-text ul li a{
+    padding: 0px 25px;
+    color: #ffff;
+}
+.serv-text ul li a:last-child{
+padding-right: 0px;
+}
+
 @media screen and (max-width:767px) {
     .container {
         width: 100%;
@@ -1680,7 +1717,9 @@ justify-content: space-between;
        
         align-items: center;
     }
-
+    .card-sild li{
+        width: 100%;
+    }
 
     .right-icon{
         display: none;
@@ -2060,8 +2099,30 @@ line-height: 40px;
 }
 
 
+.demo-icons{
+    margin-top: 119px;
+}
+
+.reserved-flex ul {
+    flex-direction: column;
+    padding: 30px 0px;
+    
+}
+
+.reserved-flex{
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 
+
+.reserved-flex li{
+    padding: 20px 0px;
+}
+
+.serv-text ul li a{
+    padding: 0px 0px;
+}
 }
 
 
