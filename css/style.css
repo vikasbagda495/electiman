@@ -50,7 +50,7 @@ position: relative;
     z-index: 1;   
 }
 
-.menu-all{
+.header{
     z-index: 1;
     position: absolute;
     top: 20;
@@ -66,7 +66,7 @@ position: relative;
 .slide-text{
     
     top: 55%;
- left: 32%;
+ left: 33%;
  transform: translate(-50%, -50%);
  margin: auto;
  position: absolute;
@@ -122,6 +122,25 @@ position: relative;
     transition: 0.5s ease all;
 
 }
+
+
+
+.fixed-header{
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99;
+    
+}
+    
+
+
+
+
+
 
 .menu > ul > li:last-child a:hover{
     color: #fff;
@@ -446,6 +465,12 @@ display: block;
 
 }
 
+.rounds img{
+    width: 80%;
+    padding: 15px 20px;
+   
+}
+
 
 .get-text {
     width: 50%;
@@ -516,20 +541,22 @@ height: 8px;
 border-radius: 5px;
 margin-top: 10px;
 justify-content: flex-start;
-
+align-items: center;
 position: relative;
 display: flex;
 }
 .line-2{
-  animation: load 3s normal forwards;
+  /* animation: load 3s normal forwards; */
 
     background-color: #ffa500;
-    width: 80%;
+    width: 81%;
     height: 8px;
     border-radius: 5px;
 
   
 }
+
+
 @keyframes load {
     0% { width: 0; }
     100% { width: 68%; }    
@@ -545,7 +572,8 @@ font-size: 18px;
     background-color: #ffa500;
     width: 55%;
     height: 8px;
-    border-radius: 5px;    
+    border-radius: 5px;   
+     
 }
 .outline-pers{
     width: 53%; 
@@ -956,7 +984,7 @@ text-overflow: ellipsis; */
 
 }
 .random-image{
-    background: url(./images/random\ image.png) no-repeat;
+    background: url(../images/random\ image.png) no-repeat;
     background-size: cover;
     width: 100%;
     position: relative;
@@ -1701,7 +1729,7 @@ padding-right: 0px;
     .logo img{
         width: 100%;
     }
-    .menu-all{
+    .header{
         left: 20px;
         right: 20px;
     
@@ -2083,7 +2111,9 @@ line-height: 40px;
     width: 100%;
     margin-top: 100px;
 }
-
+.fixed-header{
+    display: none;
+}
 .prodect{
     width: 100%;
     margin-top: 70px;
@@ -2122,6 +2152,27 @@ line-height: 40px;
 
 .serv-text ul li a{
     padding: 0px 0px;
+}
+
+
+.taylor-text h2{
+    font-size: 20pxpx;
+}
+
+
+.card-markiting li p{
+    padding-left: 20px;
+    width: 100%;
+}
+
+
+.card-markiting{
+    width: 100%;
+}
+
+.star-image{
+    padding-left: 20px;
+    padding-right: 160px;
 }
 }
 

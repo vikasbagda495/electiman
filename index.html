@@ -25,7 +25,14 @@
 
 <body>
 
-    <div class="menu-all">
+
+
+    <div class="header">
+
+
+        <div class="container">
+
+       <div class="menu-all">
 
 
         <div class="logo">
@@ -83,9 +90,11 @@
             </ul>
 
         </div>
+    
     </div>
 
-
+    </div>
+</div>
 
     <div class="main-slider">
         
@@ -381,7 +390,7 @@
     
                     <li>
                         <div class="rounds">
-                            <!-- <img src="./images/video-icon.png" alt=""> -->
+                            <img src="./images/video-two.png" alt="">
                         </div>
     
                         <div class="manganment">
@@ -524,20 +533,20 @@
         <div class="clint-text">
             <ul>
                 <li>
-                    <h2>423 +</h2>
+                    <h2 class="counter" data-target="423" >+</h2>
                     <span>Happy Client</span>
-
+                  
                 </li>
 
                 <li>
-                    <h2>756 +</h2>
+                    <h2 class="counter" data-target="756" >+</h2>
                     <span>Complate Project</span>
 
                 </li>
 
 
                 <li>
-                    <h2>150 +</h2>
+                    <h2 class="counter" data-target="150" >+</h2>
                     <span>Electical Company</span>
 
                 </li>
@@ -546,7 +555,7 @@
 
 
                 <li>
-                    <h2>24 +</h2>
+                    <h2 class="counter" data-target="24" >+</h2>
                     <span>Win Awards</span>
 
                 </li>
@@ -1755,6 +1764,34 @@
 
         });
 
+
+
+        const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  counter.innerText = "0";
+  const updateCounter = () => {
+    const target = +counter.getAttribute("data-target");
+    const count = +counter.innerText;
+    const increment = target / 200;
+    if (count < target) {
+      counter.innerText = `${Math.ceil(count + increment)}`;
+      setTimeout(updateCounter, 1);
+    } else counter.innerText = target;
+  };
+  updateCounter();
+});
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 300) {
+                $('.header').addClass('fixed-header');
+                // $('nav div').addClass('visible-title');
+            }
+            else {
+                $('.header').removeClass('fixed-header');
+                // $('nav div').removeClass('visible-title');
+            }
+        });
         
         $('.slider-image').slick({
             dots: false,
@@ -1777,6 +1814,19 @@
             slidestoscroll: 2,
             arrows:false,
             autoplay: true,
+
+            responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+]
+
         });
 
         $(document).ready(function () {
